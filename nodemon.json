@@ -1,0 +1,17 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules"
+  ],
+  "watch": [
+		"public/",
+		"routes/",
+    "views/",
+    "app.js"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+	},
+	"ext": "js, scss, twig"
+}

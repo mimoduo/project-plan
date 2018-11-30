@@ -1,0 +1,36 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  <div class="project">
+		<div class="project_header">
+			<div class="row">
+				<div class="project_header_inner">
+					<div class="project_header_group">
+						{% include "../partials/project-details.twig" with {
+							title: "Shasta Community College",
+							time: "now"|date("m/d/Y")
+						} %}
+					</div>
+					<div class="project_header_group">
+						{% include "../partials/project-legend.twig" %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="project_body">
+			<div class="project_tables">
+				{% include "../partials/project-table.twig" with {
+					title: "Templates"
+				} %}
+
+				{% include "../partials/project-table.twig" with {
+					title: "Integrations"
+				} %}
+
+				{% include "../partials/project-table.twig" with {
+					title: "General Complexities"
+				} %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

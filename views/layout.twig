@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+    <title>{{title}}</title>
+		<meta name="description" content="{{description}}">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header class="page_header">
+      <h1 class="page_title">
+        <a class="page_title_link" href="/">Fastspot Project Plans</a>
+      </h1>
+    </header>
+    <main class="page">
+      {% block body %}
+      {% endblock %}
+    </main>
+    <script src='/javascripts/project.js'></script>
+  </body>
+</html>

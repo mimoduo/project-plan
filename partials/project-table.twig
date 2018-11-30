@@ -1,0 +1,12 @@
+<div class="project_table">
+	<h3 class="project_table_title">{{title}}</h3>
+	{% for row in rows %}
+		<div class="project_table_row">
+			{% for item in items %}
+				{% include "project-card.twig" with {
+					title: item.title
+				} %}
+			{% endfor %}
+		</div>
+	{% endfor %}
+</div>
