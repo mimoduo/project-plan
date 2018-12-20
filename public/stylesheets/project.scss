@@ -1,0 +1,134 @@
+/* ==========================================================================
+	Project
+============================================================================= */
+
+.project {
+	margin-top: 40px;
+}
+
+
+/* Project Header
+============================================================================= */
+
+.project_header {}
+
+.project_header_inner {
+	border-bottom: 1px solid darken(#f0f0f0, 5%);
+	padding: 40px 20px 35px;
+}
+
+.project_title {
+	@include nd(700);
+
+	width: 100%;
+	
+	border: 0;
+	font-size: 30px;
+	margin: 0 0 4px;
+
+	@media screen and (min-width: 980px) {
+		font-size: 40px;
+		margin-bottom: 10px;
+	}
+}
+
+
+/* Project Details
+============================================================================= */
+
+.project_details {
+
+	@media screen and (min-width: 980px) {
+		align-items: baseline;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+}
+
+.project_last_updated {
+	@include nt(700);
+
+	color: #DA2315;
+	display: block;
+	font-size: 14px;
+	margin-bottom: 8px;
+
+	@media screen and (min-width: 980px) {
+		margin-bottom: 0;
+	}
+}
+
+
+/* Project Scores
+============================================================================= */
+
+.project_scores {
+	font-size: 16px;
+
+	@media screen and (min-width: 980px) {
+		position: relative;
+		top: -1px;
+		
+		display: inline-block;
+		font-size: 18px;
+	}
+}
+
+.project_score_label {
+	@include nd(700);
+
+	position: relative;
+	top: 1px;
+
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: top;
+}
+
+.project_score {
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: top;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.project_score_hint {
+	@include nt(400);
+}
+
+.project_score_input {
+	@include nd(700);
+
+	max-width: 50px;
+
+	appearance: none;
+	-webkit-appearance: none;
+	border: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+.project_score_value {
+	@include nd(700);
+}
+
+
+/* Project Tool
+============================================================================= */
+
+.project_tool_wrapper {
+	border-top: 1px solid darken(#f0f0f0, 5%);
+	padding: 20px 20px 60px;
+}
+
+.project_tool {
+	@include space-tool;
+}
+
+.project_tool_icon {}
+
+.project_tool_label {}

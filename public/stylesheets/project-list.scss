@@ -1,0 +1,36 @@
+.projects {
+	padding: 80px 20px;
+}
+
+.projects_items {
+	border-top: 3px solid #eee;
+}
+
+.projects_item {
+	@include nd(700);
+
+	align-items: center;
+	border-bottom: 1px solid #eee;
+	display: flex;
+	font-size: 20px;
+	justify-content: space-between;
+	padding: 13px 0;
+}
+
+.projects_item_link {
+	color: #000;
+	display: block;
+	text-decoration: none;
+}
+
+.projects_tool {
+	@include space-tool;
+}
+
+.projects_tool_item {
+	margin-top: 20px;
+}
+
+.projects_tool_icon {}
+
+.projects_tool_label {}

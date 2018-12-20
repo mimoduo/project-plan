@@ -1,0 +1,26 @@
+@mixin space-tool(
+	$background: #eee,
+	$color: #000,
+	$icon: #00b071
+) {
+	background: $background;
+	border: 1px solid rgba(#000, .125);
+	border-radius: 40px;
+	display: inline-block;
+	padding: 11px 20px;
+
+	[class$="icon"] {
+		color: $icon;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	[class$="label"] {
+		@include nt(700);
+
+		color: $color;
+		display: inline-block;
+		font-size: 14px;
+		vertical-align: middle;
+	}
+}

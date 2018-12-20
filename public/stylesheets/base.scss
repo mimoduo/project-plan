@@ -1,0 +1,15 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+button {
+	cursor: pointer;
+}
+
+svg {
+	fill: currentColor;
+	display: block;
+	transition: fill .25s;
+}

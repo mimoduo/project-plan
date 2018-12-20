@@ -1,11 +1,8 @@
 var express = require('express');
+var projectController = require('../controllers/project.js');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('project', { 
-		title: 'Project'
-	});
-});
+router.get('/:id', projectController.projectGet);
+router.post('/:id', projectController.projectPost);
 
 module.exports = router;

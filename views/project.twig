@@ -1,36 +1,45 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-  <div class="project">
+  <div class="project" data-id="{{project._id}}">
 		<div class="project_header">
-			<div class="row">
-				<div class="project_header_inner">
-					<div class="project_header_group">
-						{% include "../partials/project-details.twig" with {
-							title: "Shasta Community College",
-							time: "now"|date("m/d/Y")
-						} %}
-					</div>
-					<div class="project_header_group">
-						{% include "../partials/project-legend.twig" %}
+			<div class="project_header_inner">
+				<input class="project_title" type="text" value="{{project.title}}" />
+				<div class="project_details">
+					<time class="project_last_updated">Updated: {{project.lastUpdated|date("m/d/y")}}</time>
+					{# Parking lot gets it's own hours separate from Current hours #}
+					<div class="project_scores">
+						<span class="project_score_label">Points: </span>
+						<div class="project_score">
+							<span class="project_score_hint">Target: </span>
+							<input class="project_score_input" type="number" value="{{project.points.target|default(0)}}" placeholder="#" min="1" max="999" />
+						</div>
+						<div class="project_score">
+							<span class="project_score_hint">Current: </span>
+							<span class="project_score_value">42</span>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="project_body">
-			<div class="project_tables">
-				{% include "../partials/project-table.twig" with {
-					title: "Templates"
-				} %}
-
-				{% include "../partials/project-table.twig" with {
-					title: "Integrations"
-				} %}
-
-				{% include "../partials/project-table.twig" with {
-					title: "General Complexities"
-				} %}
+			<div class="project_boards">
+				{% for board in project.boards %}
+					{% include "../partials/project-board.twig" with {
+						board: board
+					} %}
+				{% endfor %}
+			</div>
+			<div class="project_tool_wrapper">
+				<button class="project_tool project_tool_board">
+					<span class="project_tool_icon">{{site.add}}</span>
+					<span class="project_tool_label">New Board</span>
+				</button>
 			</div>
 		</div>
 	</div>
+{% endblock %}
+
+{% block javascript %}
+  <script src='/javascripts/project.js'></script>
 {% endblock %}

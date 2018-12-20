@@ -1,0 +1,37 @@
+.page_header {
+	width: 100%;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+
+	background: #F6F6F6;
+	padding: 11px 0;
+	text-align: center;
+}
+
+.page_title {
+	@include nd(700);
+
+	color: #000;
+	font-size: 16px;
+	margin: 0;
+}
+
+.page_title_link {
+	align-items: center;
+	color: inherit;
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.page_title_icon {
+	position: relative;
+	top: -1px;
+	
+	margin-right: 8px;
+}
+
+.page_title_label {}

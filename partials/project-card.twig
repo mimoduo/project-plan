@@ -1,9 +1,14 @@
-<div class="project_card">
-	<div class="project_card_header"></div>
+{# Ability to add confluence link to each card #}
+<div class="project_card{% if card.linked %} project_card_linked{% endif %}" data-id="{{card._id}}">
+	<div class="project_card_tools">
+		<button class="project_card_tool project_card_tool_delete">{{site.delete}}</button>
+	</div>
 	<div class="project_card_body">
-		<div class="project_card_title">{{title}}</div>
+		<button class="project_card_type project_card_type_{{card.type}}" data-type="{{card.type}}">{{card.type}}</button>
+		<input class="project_card_title" type="text" value="{{card.title}}" placeholder="Enter in a Title" />
 	</div>
-	<div class="project_card_footer">
-		<div class="project_card_points">#</div>
-	</div>
+	{% if not last %}
+		<button class="project_card_tool project_card_tool_link" data-linked="{{card.linked}}">{{site.link}}</button>
+	{% endif %}
+	<input class="project_card_points" type="number" placeholder="#" min="0" max="9" />
 </div>

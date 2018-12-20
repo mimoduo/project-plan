@@ -1,0 +1,28 @@
+<div class="project_board" data-id="{{board._id}}">
+	<div class="project_board_header">
+		<input class="project_board_title" type="text" value="{{board.title}}" />
+	</div>
+	{% for column in board.columns %}
+		<div class="project_column" data-id="{{column._id}}">
+			<div class="project_column_header">
+				<input class="project_column_title" type="text" value="{{column.title}}" placeholder="Enter in a Column Title" />
+			</div>
+			<div class="project_board_cards">
+				{% for card in column.cards %}
+					{% include "../partials/project-card.twig" with {
+						card: card,
+						last: loop.last ? true : false
+					} %}
+				{% endfor %}
+			</div>
+			<button class="project_board_tool project_board_tool_card">
+				<span class="project_board_tool_icon">{{site.add}}</span>
+				<span class="project_board_tool_label">New Card</span>
+			</button>
+		</div>
+	{% endfor %}
+	<button class="project_board_tool project_board_tool_column">
+		<span class="project_board_tool_icon">{{site.add}}</span>
+		<span class="project_board_tool_label">New Column</span>
+	</button>
+</div>

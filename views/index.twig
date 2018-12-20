@@ -1,6 +1,21 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-  <h1>{{title}}</h1>
-  <p>Welcome to {{title}}</p>
+  <div class="projects">
+    <div class="projects_items">
+      {% for project in projects %}
+        <div class="projects_item">
+          <a class="projects_item_link" href="{{project.url}}">{{project.title}}</a>
+        </div>
+      {% endfor %}
+    </div>
+    <button class="projects_tool projects_tool_item">
+      <span class="projects_tool_icon">{{site.add}}</span>
+      <span class="projects_tool_label">New Project</span>
+    </button>
+  </div>
+{% endblock %}
+
+{% block javascript %}
+  <script src='/javascripts/project-list.js'></script>
 {% endblock %}

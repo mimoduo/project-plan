@@ -7,18 +7,25 @@
 		<meta name="mobile-web-app-capable" content="yes">
     <title>{{title}}</title>
 		<meta name="description" content="{{description}}">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/site.css' />
   </head>
   <body>
+    {% import '../partials/macros.twig' as site %}
     <header class="page_header">
       <h1 class="page_title">
-        <a class="page_title_link" href="/">Fastspot Project Plans</a>
+        <a class="page_title_link" href="/">
+          <span class="page_title_icon">
+            {{site.logo}}
+          </span>
+          <span class="page_title_label">Fastspot Project Plans</span>
+        </a>
       </h1>
     </header>
     <main class="page">
       {% block body %}
       {% endblock %}
     </main>
-    <script src='/javascripts/project.js'></script>
+    {% block javascript %}
+    {% endblock %}
   </body>
 </html>
