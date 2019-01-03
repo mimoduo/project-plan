@@ -2,26 +2,27 @@
 	Project
 ============================================================================= */
 
-.project {
-	margin-top: 40px;
-}
+.project {}
 
 
 /* Project Header
 ============================================================================= */
 
-.project_header {}
-
-.project_header_inner {
-	border-bottom: 1px solid darken(#f0f0f0, 5%);
+.project_header {
+	background: #f8f8f8;
 	padding: 40px 20px 35px;
 }
+
+.project_header_inner {}
 
 .project_title {
 	@include nd(700);
 
 	width: 100%;
 	
+	appearance: none;
+	-webkit-appearance: none;
+	background: none;
 	border: 0;
 	font-size: 30px;
 	margin: 0 0 4px;
@@ -107,6 +108,7 @@
 
 	appearance: none;
 	-webkit-appearance: none;
+	background: none;
 	border: 0;
 	overflow: hidden;
 	padding: 0;

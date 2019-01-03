@@ -1,14 +1,8 @@
 .page_header {
 	width: 100%;
 
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 20;
-
-	background: #F6F6F6;
-	padding: 11px 0;
-	text-align: center;
+	background: #f0f0f0;
+	padding: 11px 20px;
 }
 
 .page_title {
@@ -23,7 +17,6 @@
 	align-items: center;
 	color: inherit;
 	display: flex;
-	justify-content: center;
 	text-decoration: none;
 }
 

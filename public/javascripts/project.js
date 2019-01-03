@@ -9,6 +9,7 @@ var projectCardToolDelete = document.querySelectorAll(".project_card_tool_delete
 var projectCardToolLink = document.querySelectorAll(".project_card_tool_link");
 var projectCardType = document.querySelectorAll(".project_card_type");
 var projectCardTitle = document.querySelectorAll(".project_card_title");
+var projectCardPoints = document.querySelectorAll(".project_card_points");
 
 bindProjectUI();
 bindCardUI();
@@ -50,6 +51,10 @@ function bindCardUI() {
 
 	for (var x = 0; x < projectCardTitle.length; x++) {
 		projectCardTitle[x].addEventListener("keyup", changeCardTitle, false);
+	}
+
+	for (var x = 0; x < projectCardPoints.length; x++) {
+		projectCardPoints[x].addEventListener("keyup", changeCardPoints, false);
 	}
 }
 
@@ -255,6 +260,19 @@ function changeCardTitle(e) {
 		title: cardTitle.value
 	}, function(data) {});
 }
+
+function changeCardPoints(e) {
+	var cardPoints = e.currentTarget;
+	var card = cardPoints.closest('.project_card');
+
+	postProject({
+		action: 'change-card-points',
+		card: card.dataset.id,
+		points: cardPoints.value
+	}, function(data) {});
+}
+
+
 
 function flipLinked(e) {
 	var linkedTool = e.currentTarget;

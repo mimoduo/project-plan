@@ -354,13 +354,8 @@ svg {
 
 .page_header {
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 20;
-  background: #F6F6F6;
-  padding: 11px 0;
-  text-align: center; }
+  background: #f0f0f0;
+  padding: 11px 20px; }
 
 .page_title {
   font-family: "Neue Haas Grotesk Display Std", sans-serif;
@@ -373,7 +368,6 @@ svg {
   align-items: center;
   color: inherit;
   display: flex;
-  justify-content: center;
   text-decoration: none; }
 
 .page_title_icon {
@@ -384,19 +378,19 @@ svg {
 /* ==========================================================================
 	Project
 ============================================================================= */
-.project {
-  margin-top: 40px; }
-
 /* Project Header
 ============================================================================= */
-.project_header_inner {
-  border-bottom: 1px solid #e3e3e3;
+.project_header {
+  background: #f8f8f8;
   padding: 40px 20px 35px; }
 
 .project_title {
   font-family: "Neue Haas Grotesk Display Std", sans-serif;
   font-weight: 700;
   width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
   border: 0;
   font-size: 30px;
   margin: 0 0 4px; }
@@ -462,6 +456,7 @@ svg {
   max-width: 50px;
   appearance: none;
   -webkit-appearance: none;
+  background: none;
   border: 0;
   overflow: hidden;
   padding: 0; }
@@ -559,8 +554,8 @@ svg {
   background: #f0f0f0;
   border: 1px solid #e3e3e3;
   display: inline-block;
-  margin-right: 20px;
-  padding: 20px;
+  margin-right: 15px;
+  padding: 15px 15px 30px;
   text-align: center;
   vertical-align: top; }
   .project_board_header + .project_column {
@@ -569,18 +564,18 @@ svg {
 .project_column_title {
   font-family: "Neue Haas Grotesk Display Std", sans-serif;
   font-weight: 700;
-  width: calc(100% + 40px);
+  width: calc(100% + 30px);
   appearance: none;
   -webkit-appearance: none;
   background: #fff;
   border: 0;
   border-bottom: 1px solid #e3e3e3;
   display: block;
-  margin: -20px -20px 20px;
+  margin: -15px -15px 15px;
   padding: 15px 20px; }
 
 .project_board_cards {
-  width: 250px; }
+  width: 240px; }
 
 .project_board_tool_card {
   background: #fff;
